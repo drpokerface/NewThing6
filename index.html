@@ -1,348 +1,670 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Ocean Bootstrap 4.0 simple theme</title>
 <!--
-Ocean Theme
-http://www.templatemo.com/tm-484-ocean
+New Event
+http://www.templatemo.com/tm-486-new-event
 -->
+<title>New Event - Responsive HTML Template</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- load stylesheets -->
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"><!-- Google web font "Open Sans", https://www.google.com/fonts/specimen/Open+Sans -->
-    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css"> <!-- Font Awesome, https://fortawesome.github.io/Font-Awesome/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">                       <!-- Bootstrap style, http://v4-alpha.getbootstrap.com/ -->
-    <link rel="stylesheet" href="css/templatemo-style.css">                    <!-- Templatemo style -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-          <![endif]-->
+<!-- Main css -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Google Font -->
+<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
+
 </head>
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
-    <body>
+<!-- =========================
+     PRE LOADER       
+============================== -->
+<div class="preloader">
 
-        <div class="container-fluid">
-            
-            <div class="row"> 
+	<div class="sk-rotating-plane"></div>
 
-                <section class="tm-section-intro">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <div class="tm-wrapper-center">
-                            <h1 class="tm-section-intro-title">Big Ocean</h1>
-                            <p class="tm-section-intro-text">Free Bootstrap 4.0 Simple Theme by templatemo<br>
-                            Feel free to use this for any purpose
-                            </p>
-                            <a href="#tm-section-2" class="tm-btn-white-big">Explore</a>
-                        </div>            
-                    </div>
-                </section>    
+</div>
 
-            </div>
 
-            <div class="row" id="tm-section-2">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+<!-- =========================
+     NAVIGATION LINKS     
+============================== -->
+<div class="navbar navbar-fixed-top custom-navbar" role="navigation">
+	<div class="container">
 
-                    <!-- slider -->
-                    <section>
-                        <div id="tmCarousel" class="carousel slide tm-carousel" data-ride="carousel" data-interval="false"> <!-- If you want to make the carousel auto play, remove data-interval="false" -->
+		<!-- navbar header -->
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">New Event</a>
+		</div>
 
-                            <ol class="carousel-indicators">
-                                <li data-target="#tmCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#tmCarousel" data-slide-to="1" class=""></li>
-                                <li data-target="#tmCarousel" data-slide-to="2" class=""></li>
-                            </ol>
+		<div class="collapse navbar-collapse">
 
-                            <div class="carousel-inner" role="listbox">
-                            
-                                <div class="carousel-item active">
-                                    <div class="carousel-content">
-                                        <div>
-                                            <h2 class="tm-carousel-item-title">Lorem ipsum dolor sit amet</h2>
-                                            <p class="tm-carousel-item-text">Praesent ultrices a ante at efficitur. Aliquam eu lacinia nunc. Phasellus lacinia feugiat accumsan.<br>
-                                            Nulla tempor vel est sit amet tincidunt. Nullam eget lectus ut felis aliquam<br>
-                                            laoreet eget eu dui. Curabitur in imperdiet lorem.</p>
-                                        </div>
-                                    </div>                               
-                                </div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#intro" class="smoothScroll">Intro</a></li>
+				<li><a href="#overview" class="smoothScroll">Overview</a></li>
+				<li><a href="#speakers" class="smoothScroll">Speakers</a></li>
+				<li><a href="#program" class="smoothScroll">Programs</a></li>
+				<li><a href="#register" class="smoothScroll">Register</a></li>
+				<li><a href="#venue" class="smoothScroll">Venue</a></li>
+				<li><a href="#sponsors" class="smoothScroll">Sponsors</a></li>
+				<li><a href="#contact" class="smoothScroll">Contact</a></li>
+			</ul>
 
-                                <div class="carousel-item">
-                                    <div class="carousel-content">
-                                        <div>
-                                            <h2 class="tm-carousel-item-title">Quisque vel nisi pharetra</h2>
-                                            <p class="tm-carousel-item-text">Praesent ultrices a ante at efficitur. Aliquam eu lacinia nunc. Phasellus lacinia feugiat accumsan.<br>
-                                            Nulla tempor vel est sit amet tincidunt. Nullam eget lectus ut felis aliquam<br>
-                                            laoreet eget eu dui. Curabitur in imperdiet lorem.</p>
-                                        </div>
-                                    </div>                                
-                                </div>
+		</div>
 
-                                <div class="carousel-item">
-                                    <div class="carousel-content">
-                                        <div>
-                                            <h2 class="tm-carousel-item-title">Pellentesque id sem</h2>
-                                            <p class="tm-carousel-item-text">Praesent ultrices a ante at efficitur. Aliquam eu lacinia nunc. Phasellus lacinia feugiat accumsan.<br>
-                                            Nulla tempor vel est sit amet tincidunt. Nullam eget lectus ut felis aliquam<br>
-                                            laoreet eget eu dui. Curabitur in imperdiet lorem.</p>
-                                        </div>
-                                    </div>                                
-                                </div>
+	</div>
+</div>
 
-                            </div>
-                            
-                        </div>                    
-                    </section>
-                </div>
-            </div> <!-- row -->
 
-            <div class="row">
-                
-                <section class="tm-2-col-img-text tm-2-col-img-lg-right">
+<!-- =========================
+    INTRO SECTION   
+============================== -->
+<section id="intro" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<h3 class="wow bounceIn" data-wow-delay="0.9s">July 22 - 26 in San Francisco, CA</h3>
+				<h1 class="wow fadeInUp" data-wow-delay="1.6s">Web Design Conference</h1>
+				<a href="#overview" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">LEARN MORE</a>
+				<a href="#register" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" data-wow-delay="2.3s">REGISTER NOW</a>
+			</div>
+
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    OVERVIEW SECTION   
+============================== -->
+<section id="overview" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.6s">
+				<h3>New Event is a fully responsive one-page template for events, conferences or workshops.</h3>
+				<p>This is a Bootstrap v3.3.6 layout that is responsive and mobile friendly. You may download and modify this template for your website. Please tell your friends about templatemo.</p>
+				<p>Quisque facilisis scelerisque venenatis. Nam vulputate ultricies luctus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+			</div>
+					
+			<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.9s">
+				<img src="images/overview-img.jpg" class="img-responsive" alt="Overview">
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    DETAIL SECTION   
+============================== -->
+<section id="detail" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInLeft col-md-4 col-sm-4" data-wow-delay="0.3s">
+				<i class="fa fa-group"></i>
+				<h3>650 Participants</h3>
+				<p>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
+			</div>
+
+			<div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.6s">
+				<i class="fa fa-clock-o"></i>
+				<h3>24 Programs</h3>
+				<p>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
+			</div>
+
+			<div class="wow fadeInRight col-md-4 col-sm-4" data-wow-delay="0.9s">
+				<i class="fa fa-microphone"></i>
+				<h3>11 Speakers</h3>
+				<p>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    VIDEO SECTION   
+============================== -->
+<section id="video" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInUp col-md-6 col-sm-10" data-wow-delay="1.3s">
+				<h2>Watch Video</h2>
+				<h3>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet consectetuer diam nonummy.</p>
+			</div>
+			<div class="wow fadeInUp col-md-6 col-sm-10" data-wow-delay="1.6s">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XDPwXQjAlB0" allowfullscreen></iframe>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    SPEAKERS SECTION   
+============================== -->
+<section id="speakers" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12 wow bounceIn">
+				<div class="section-title">
+					<h2>Creative Speakers</h2>
+					<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+				</div>
+			</div>
+
+			<!-- Testimonial Owl Carousel section
+			================================================== -->
+			<div id="owl-speakers" class="owl-carousel">
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="speakers-wrapper">
+						<img src="images/speakers-img1.jpg" class="img-responsive" alt="speakers">
+							<div class="speakers-thumb">
+								<h3>Jenny Green</h3>
+								<h6>UI Designer</h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+					<div class="speakers-wrapper">
+						<img src="images/speakers-img2.jpg" class="img-responsive" alt="speakers">
+							<div class="speakers-thumb">
+								<h3>David Yoon</h3>
+								<h6>Creative Director</h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="speakers-wrapper">
+						<img src="images/speakers-img3.jpg" class="img-responsive" alt="speakers">
+							<div class="speakers-thumb">
+								<h3>Je Mary Lee</h3>
+								<h6>Web Specialist</h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+					<div class="speakers-wrapper">
+						<img src="images/speakers-img4.jpg" class="img-responsive" alt="speakers">
+							<div class="speakers-thumb">
+								<h3>Johnathan Doe</h3>
+								<h6>Frontend Dev</h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+					<div class="speakers-wrapper">
+						<img src="images/speakers-img5.jpg" class="img-responsive" alt="speakers">
+							<div class="speakers-thumb">
+								<h3>Elite Hamilton</h3>
+								<h6>Marketing Guru</h6>
+							</div>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    PROGRAM SECTION   
+============================== -->
+<section id="program" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="0.6s">
+				<div class="section-title">
+					<h2>Our Programs</h2>
+					<p>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
+				</div>
+			</div>
+
+			<div class="wow fadeInUp col-md-10 col-sm-10" data-wow-delay="0.9s">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="active"><a href="#fday" aria-controls="fday" role="tab" data-toggle="tab">FIRST DAY</a></li>
+					<li><a href="#sday" aria-controls="sday" role="tab" data-toggle="tab">SECOND DAY</a></li>
+					<li><a href="#tday" aria-controls="tday" role="tab" data-toggle="tab">THIRD DAY</a></li>
+				</ul>
+				<!-- tab panes -->
+				<div class="tab-content">
+
+					<div role="tabpanel" class="tab-pane active" id="fday">
+						<!-- program speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/program-img1.jpg" class="img-responsive" alt="program">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 09.00 AM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 240</span>
+							</h6>
+							<h3>Introduction to Design</h3>
+							<h4>By Jenny Green</h4>
+							<p>Maecenas accumsan metus turpis, eu faucibus ligula interdum in. Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum.</p>
+						</div>
+
+						<!-- program divider -->
+						<div class="program-divider col-md-12 col-sm-12"></div>
+
+						<!-- program speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/program-img2.jpg" class="img-responsive" alt="program">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 10.00 AM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 360</span>
+							</h6>
+							<h3>Front-End Development</h3>
+							<h4>By Johnathan Mark</h4>
+							<p>Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum. Praesent ullamcorper mauris fermentum turpis scelerisque rutrum eget eget turpis.</p>
+						</div>
+
+						<!-- program divider -->
+						<div class="program-divider col-md-12 col-sm-12"></div>
+
+						<!-- program speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/program-img3.jpg" class="img-responsive" alt="program">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 11.00 AM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 450</span>
+							</h6>
+							<h3>Social Media Marketing</h3>
+							<h4>By Johnathan Doe</h4>
+							<p>Nam pulvinar, elit vitae rhoncus pretium, massa urna bibendum ex, aliquam efficitur lorem odio vitae erat. Integer rutrum viverra magna, nec ultrices risus rutrum nec.</p>
+						</div>
+					</div>
+
+					<div role="tabpanel" class="tab-pane" id="sday">
+						<!-- program speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/program-img4.jpg" class="img-responsive" alt="program">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 11.00 AM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 240</span>
+							</h6>
+							<h3>Backend Development</h3>
+							<h4>By Matt Lee</h4>
+							<p>Integer rutrum viverra magna, nec ultrices risus rutrum nec. Pellentesque interdum vel nisi nec tincidunt. Quisque facilisis scelerisque venenatis. Nam vulputate ultricies luctus.</p>
+						</div>
+
+						<!-- program divider -->
+						<div class="program-divider col-md-12 col-sm-12"></div>
+
+						<!-- program speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/program-img5.jpg" class="img-responsive" alt="program">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 01.00 PM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 450</span>
+							</h6>
+							<h3>Web Application Lite</h3>
+							<h4>By David Orlando</h4>
+							<p>Aliquam faucibus lobortis dolor, id pellentesque eros pretium in. Aenean in erat ut quam aliquet commodo. Vivamus aliquam pulvinar ipsum ut sollicitudin. Suspendisse quis sollicitudin mauris.</p>
+						</div>
+
+						<!-- program divider -->
+						<div class="program-divider col-md-12 col-sm-12"></div>
+
+						<!-- program speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/program-img6.jpg" class="img-responsive" alt="program">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 03.00 PM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 650</span>
+							</h6>
+							<h3>Professional UX Design</h3>
+							<h4>By James Lee Mark</h4>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+						</div>
+					</div>
+
+					<div role="tabpanel" class="tab-pane" id="tday">
+						<!-- program speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/program-img7.jpg" class="img-responsive" alt="program">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 03.00 PM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 750</span>
+							</h6>
+							<h3>Online Shopping Business</h3>
+							<h4>By Michael Walker</h4>
+							<p>Aliquam faucibus lobortis dolor, id pellentesque eros pretium in. Aenean in erat ut quam aliquet commodo. Vivamus aliquam pulvinar ipsum ut sollicitudin. Suspendisse quis sollicitudin mauris.</p>
+						</div>
+
+						<!-- program divider -->
+						<div class="program-divider col-md-12 col-sm-12"></div>
+
+						<!-- program speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/program-img8.jpg" class="img-responsive" alt="program">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 05.00 PM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 850</span>
+							</h6>
+							<h3>Introduction to Mobile App</h3>
+							<h4>By Cherry Stella</h4>
+							<p>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
+						</div>
+
+						<!-- program divider -->
+						<div class="program-divider col-md-12 col-sm-12"></div>
+
+						<!-- program speaker here -->
+						<div class="col-md-2 col-sm-2">
+							<img src="images/program-img9.jpg" class="img-responsive" alt="program">
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<h6>
+								<span><i class="fa fa-clock-o"></i> 07.00 PM</span> 
+								<span><i class="fa fa-map-marker"></i> Room 750</span>
+							</h6>
+							<h3>Bootstrap UI Design</h3>
+							<h4>By John David</h4>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+						</div>
+					</div>
+
+				</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+   REGISTER SECTION   
+============================== -->
+<section id="register" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s">
+				<h2>Register Here</h2>
+				<h3>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit.</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet consectetuer diam nonummy.</p>
+			</div>
+
+			<div class="wow fadeInUp col-md-5 col-sm-5" data-wow-delay="1s">
+				<form action="#" method="post">
+					<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First Name">
+					<input name="lastname" type="text" class="form-control" id="lastname" placeholder="Last Name">
+					<input name="phone" type="telephone" class="form-control" id="phone" placeholder="Phone Number">
+					<input name="email" type="email" class="form-control" id="email" placeholder="Email Address">
+					<div class="col-md-offset-6 col-md-6 col-sm-offset-1 col-sm-10">
+						<input name="submit" type="submit" class="form-control" id="submit" value="REGISTER">
+					</div>
+				</form>
+			</div>
+
+			<div class="col-md-1"></div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    FAQ SECTION   
+============================== -->
+<section id="faq" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Section title
+			================================================== -->
+			<div class="wow bounceIn col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 text-center">
+				<div class="section-title">
+					<h2>Do you have Questions?</h2>
+					<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+				</div>
+			</div>
+
+			<div class="wow fadeInUp col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10" data-wow-delay="0.9s">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  					<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingOne">
+      						<h4 class="panel-title">
+        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          							 What is Responsive Design?
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      						<div class="panel-body">
+        						<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+								<p>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
+      						</div>
+   						 </div>
+ 					</div>
+
+    				<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingTwo">
+      						<h4 class="panel-title">
+        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          							What are latest UX Developments?
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      						<div class="panel-body">
+                            	<p>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
+        						<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+      						</div>
+   						 </div>
+ 					</div>
+
+ 					<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingThree">
+      						<h4 class="panel-title">
+        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          							What things about Social Media will be discussed?
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      						<div class="panel-body">
+                            	<p>Aenean vulputate finibus justo et feugiat. Ut turpis lacus, dapibus quis justo id, porttitor tempor justo. Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa.</p>
+        						<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+      						</div>
+   						 </div>
+ 					 </div>
+
+ 				 </div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    VENUE SECTION   
+============================== -->
+<section id="venue" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInLeft col-md-offset-1 col-md-5 col-sm-8" data-wow-delay="0.9s">
+				<h2>Venue</h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+				<h4>New Event</h4>
+  				<h4>120 Market Street, Suite 110</h4>
+  				<h4>San Francisco, CA 10110</h4>
+				<h4>Tel: 010-020-0120</h4>		
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    SPONSORS SECTION   
+============================== -->
+<section id="sponsors" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow bounceIn col-md-12 col-sm-12">
+				<div class="section-title">
+					<h2>Our Sponsors</h2>
+					<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+				</div>
+			</div>
+
+			<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-6" data-wow-delay="0.3s">
+				<img src="images/sponsor-img1.jpg" class="img-responsive" alt="sponsors">	
+			</div>
+
+			<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-6" data-wow-delay="0.6s">
+				<img src="images/sponsor-img2.jpg" class="img-responsive" alt="sponsors">	
+			</div>
+
+			<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-6" data-wow-delay="0.9s">
+				<img src="images/sponsor-img3.jpg" class="img-responsive" alt="sponsors">	
+			</div>
+
+			<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-6" data-wow-delay="1s">
+				<img src="images/sponsor-img4.jpg" class="img-responsive" alt="sponsors">	
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    CONTACT SECTION   
+============================== -->
+<section id="contact" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInUp col-md-offset-1 col-md-5 col-sm-6" data-wow-delay="0.6s">
+				<div class="contact_des">
+					<h3>New Event</h3>
+					<p>Proin sodales convallis urna eu condimentum. Morbi tincidunt augue eros, vitae pretium mi condimentum eget. Suspendisse eu turpis sed elit pretium congue.</p>
+					<p>Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum. Praesent ullamcorper mauris fermentum turpis scelerisque rutrum eget eget turpis.</p>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor.</p>
+					<a href="#" class="btn btn-danger">DOWNLOAD NOW</a>
+				</div>
+			</div>
+
+			<div class="wow fadeInUp col-md-5 col-sm-6" data-wow-delay="0.9s">
+				<div class="contact_detail">
+					<div class="section-title">
+						<h2>Keep in touch</h2>
+					</div>
+					<form action="#" method="post">
+						<input name="name" type="text" class="form-control" id="name" placeholder="Name">
+					  	<input name="email" type="email" class="form-control" id="email" placeholder="Email">
+					  	<textarea name="message" rows="5" class="form-control" id="message" placeholder="Message"></textarea>
+						<div class="col-md-6 col-sm-10">
+							<input name="submit" type="submit" class="form-control" id="submit" value="SEND">
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- =========================
+    FOOTER SECTION   
+============================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<p class="wow fadeInUp" data-wow-delay="0.6s">Copyright &copy; 2016 Your Company 
                     
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-2-col-img">                    
-                        <img src="img/sun-cloud.jpg" alt="Image" class="img-fluid">
-                    </div>
+                    | Design: <a rel="nofollow" href="http://www.templatemo.com/page/1" target="_parent">Templatemo</a></p>
 
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-2-col-text">
-                        <h2 class="tm-2-col-text-title">Integer sed dictum lectus</h2>
-                        <p class="tm-2-col-text-description">
-                            
-                            Aliquam augue libero, convallis in vulputate vel, sodales sed
-                            purus. In non velit in eros bibendum pretium quis eu
-                            sapien. Donec sapien risus, hendrerit ut metus dignissim,
-                            pellentesque congue erat. Quisque tempor odio libero, 
-                            non auctor odio suscipit eget.
-                        </p>
-                        <a href="#" class="tm-bordered-btn">Read More</a>
-                    </div>
-                    
-                </section>
+				<ul class="social-icon">
+					<li><a href="#" class="fa fa-facebook wow fadeInUp" data-wow-delay="1s"></a></li>
+					<li><a href="#" class="fa fa-twitter wow fadeInUp" data-wow-delay="1.3s"></a></li>
+					<li><a href="#" class="fa fa-dribbble wow fadeInUp" data-wow-delay="1.6s"></a></li>
+					<li><a href="#" class="fa fa-behance wow fadeInUp" data-wow-delay="1.9s"></a></li>
+					<li><a href="#" class="fa fa-google-plus wow fadeInUp" data-wow-delay="2s"></a></li>
+				</ul>
 
-            </div> <!-- row -->
+			</div>
+			
+		</div>
+	</div>
+</footer>
 
-            <div class="row">
-                
-                <section class="tm-2-col-img-text tm-2-col-img-lg-left">
-                    
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-2-col-img">                    
-                        <img src="img/mountain.jpg" alt="Image" class="img-fluid">
-                    </div>
 
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-2-col-text">
-                        <h2 class="tm-2-col-text-title">Integer sed dictum lectus</h2>
-                        <p class="tm-2-col-text-description">
-                            Aliquam augue libero, convallis in vulputate vel, sodales sed
-                            purus. In non velit in eros bibendum pretium quis eu
-                            sapien. Donec sapien risus, hendrerit ut metus dignissim,
-                            pellentesque congue erat. Quisque tempor odio libero, 
-                            non auctor odio suscipit eget.
-                        </p>
-                        <a href="#" class="tm-bordered-btn">Read More</a>
-                    </div>
-                    
-                </section>
+<!-- Back top -->
+<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
 
-            </div> <!-- row -->
 
-            <!-- About -->
-            <div class="row tm-section tm-blue-bg-row">
-                
-                <section>
-
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-xs-center">
-                            <h2 class="tm-section-title">About our company</h2>
-                            <p class="tm-section-subtitle">
-                            Phasellus lacinia feugiat accumsan. Nulla tempor vel est sit amet tincidunt. 
-                            Nullam eget lectus ut felis aliquam.
-                            </p>    
-                        </div>
-                        
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                            
-                            <div class="tm-icon-text-boxes-container">
-                            
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                                    <div class="tm-icon-text-box">
-                                        <i class="fa fa-5x fa-mixcloud"></i>
-                                        <h3 class="tm-icon-text-box-title">Vestinbulum ornare</h3>
-                                        <p class="tm-icon-text-box-description">Nullam eget lectus ut felis aliquam laoreet eget eu dui. Curabitur in imperdiet.</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                                    <div class="tm-icon-text-box">
-                                        <i class="fa fa-5x fa-line-chart"></i>
-                                        <h3 class="tm-icon-text-box-title">Vestinbulum ornare</h3>
-                                        <p class="tm-icon-text-box-description">Nullam eget lectus ut felis aliquam laoreet eget eu dui. Curabitur in imperdiet.</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                                    <div class="tm-icon-text-box">
-                                        <i class="fa fa-5x fa-group"></i>
-                                        <h3 class="tm-icon-text-box-title">Vestinbulum ornare</h3>
-                                        <p class="tm-icon-text-box-description">Nullam eget lectus ut felis aliquam laoreet eget eu dui. Curabitur in imperdiet.</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                                    <div class="tm-icon-text-box">
-                                        <i class="fa fa-5x fa-globe"></i>
-                                        <h3 class="tm-icon-text-box-title">Vestinbulum ornare</h3>
-                                        <p class="tm-icon-text-box-description">Nullam eget lectus ut felis aliquam laoreet eget eu dui. Curabitur in imperdiet.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                </section>
-
-            </div> <!-- row -->
-
-            <div class="row tm-section">
-                
-                <section class="tm-section-contact">
-                    
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-xs-center">
-                        
-                        <h2 class="tm-section-title">Keep in touch</h2>
-                        <p class="tm-section-subtitle">Phasellus lacinia feugiat accumsan. Nulla tempor vel est sit amet tincidunt. Nullam eget lectus ut felis aliquam.</p>
-
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                        <form action="index.html" method="post" class="tm-contact-form">                                
-                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 tm-form-group-left">
-                                <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
-                            </div>
-                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 tm-form-group-right">
-                                <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="contact_subject" name="contact_subject" class="form-control" placeholder="Subject"  required/>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="Message" required></textarea>
-                            </div>
-                        
-                            <button type="submit" class="btn tm-bordered-btn pull-xs-right">Submit</button>                          
-                        </form>   
-                    </div> <!-- col -->
-                    
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 tm-contact-right">
-                        <h3 class="tm-contact-title">Our Address</h3>
-                        <p class="tm-contact-info">120-240 aliquam augue libero, convallis in vulputate vel, sodales sed purus, 10880<br>
-                            San Francisco, CA, USA
-                        </p>
-                        <p class="tm-contact-info"> 
-                            Email: <a href="mailto:info@company.com">info@company.com</a><br>
-                            
-                        </p>
-                        <p class="tm-contact-info">
-                            Phone: <a href="tel:0100100110">010-010-0110</a>
-                        </p>
-                        <div class="tm-social-icons-container">
-                            <a href="#" class="tm-social-icon-link"><i class="fa fa-facebook tm-social-icon"></i></a>
-                            <a href="#" class="tm-social-icon-link"><i class="fa fa-google-plus tm-social-icon"></i></a>
-                            <a href="#" class="tm-social-icon-link"><i class="fa fa-twitter tm-social-icon"></i></a>
-                            <a href="#" class="tm-social-icon-link"><i class="fa fa-behance tm-social-icon"></i></a>
-                            <a href="#" class="tm-social-icon-link"><i class="fa fa-linkedin tm-social-icon"></i></a>
-                        </div>
-                    </div>
-
-                </section>
-
-            </div>
-
-            <div class="row">                
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">                    
-                    <hr>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <p class="text-xs-center tm-copyright-text">Copyright &copy; 2016 Your Company</p>
-                </div>
-            </div>
-            
-        </div> <!-- container-fluid -->   
-
-        <!-- load JS files -->
-        <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery, https://jquery.com/download/ -->
-        <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h -->
-        <script src="js/bootstrap.min.js"></script>                 <!-- Bootstrap, http://v4-alpha.getbootstrap.com/ -->
-        <script src="js/jquery.touchSwipe.min.js"></script>         <!-- http://labs.rampinteractive.co.uk/touchSwipe/demos/ -->
-        
-        <script>     
-       
-            $(document).ready(function(){
-
-                /* Smooth Scrolling
-                 * https://css-tricks.com/snippets/jquery/smooth-scrolling/
-                --------------------------------------------------------------*/
-                $('a[href*="#"]:not([href="#"])').click(function() {
-                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-                        && location.hostname == this.hostname) {
-                        
-                        var target = $(this.hash);
-                        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                        
-                        if (target.length) {
-                            
-                            $('html, body').animate({
-                                scrollTop: target.offset().top
-                            }, 1000);
-                            return false;
-                        }
-                    }
-                }); 
-                
-                /* Enable swiping for tablets and mobile
-                 * http://lazcreative.com/blog/adding-swipe-support-to-bootstrap-carousel-3-0/
-                 ---------------------------------------------------------------------------------*/
-                if($(window).width() <= 991) {
-                    $(".carousel-inner").swipe( {
-                        //Generic swipe handler for all directions
-                        swipeLeft:function(event, direction, distance, duration, fingerCount) {
-                            $(this).parent().carousel('next'); 
-                        },
-                        swipeRight: function() {
-                            $(this).parent().carousel('prev'); 
-                        },
-                        //Default is 75px, set to 0 for demo so any distance triggers swipe
-                        threshold:0
-                    });
-                }  
-
-                /* Handle window resize */
-                $(window).resize(function(){
-                    if($(window).width() <= 991) {
-                        $(".carousel-inner").swipe( {
-                            //Generic swipe handler for all directions
-                            swipeLeft:function(event, direction, distance, duration, fingerCount) {
-                                $(this).parent().carousel('next'); 
-                            },
-                            swipeRight: function() {
-                                $(this).parent().carousel('prev'); 
-                            },
-                            //Default is 75px, set to 0 for demo so any distance triggers swipe
-                            threshold:0
-                        });
-                     }
-                });              
-                           
-            });
-
-        </script>             
+<!-- =========================
+     SCRIPTS   
+============================== -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
 
 </body>
 </html>
