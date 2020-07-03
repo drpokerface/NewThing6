@@ -46,7 +46,7 @@ h5 {
 
 p {
     color: #707070;
-    font-size: 160px;
+    font-size: 20px;
     line-height: 24px;
 }
 
@@ -305,7 +305,7 @@ footer {
 
 #detail .fa {
   color: #54c8f2;
-  font-size: 64px;
+  font-size: 72px;
 }
 
 
@@ -315,6 +315,10 @@ footer {
 -----------------------------------------*/
 #video iframe {
   border: none;
+}
+#video .fa {
+  color: #54c8f2;
+  font-size: 72px;
 }
 
 
