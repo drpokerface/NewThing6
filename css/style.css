@@ -110,7 +110,7 @@ footer {
 
 #intro .btn-danger,
 #contact .btn-danger {
-    background: #f2545f;
+    background: #54c8f2;
     border-color: transparent;
 }
 
@@ -318,7 +318,7 @@ footer {
 }
 #video .fa {
   color: #54c8f2;
-  font-size: 64px;
+  font-size: 45px;
   padding-right:0px;
 }
 
