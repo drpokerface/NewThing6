@@ -318,8 +318,8 @@ footer {
 }
 #video .fa {
   color: #54c8f2;
-  font-size: 72px;
-  padding-right: 2500px;
+  font-size: 64px;
+  padding-right:0px;
 }
 
 
@@ -445,7 +445,7 @@ footer {
 }
 
 #register input[type="submit"] {
-  background: #f2545f;
+  background: #54c8f2;
   border-radius: 100px;
   border: none;
   color: #ffffff;
