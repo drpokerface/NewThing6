@@ -110,7 +110,7 @@ footer {
 
 #intro .btn-danger,
 #contact .btn-danger {
-    background: #54c8f2;
+    background: #4267b2;
     border-color: transparent;
 }
 
@@ -206,7 +206,7 @@ footer {
 
 .custom-navbar .nav li a {
     color: #ffffff;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 500;
     letter-spacing: 0.6px;
     text-transform: uppercase;
