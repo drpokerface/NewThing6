@@ -215,23 +215,23 @@ footer {
 }
 
 .custom-navbar .nav li a:hover {
-    background: transparent;
+    background: black;
     color: #4267b2;
 }
 
 .custom-navbar .navbar-nav > li > a:hover,
 .custom-navbar .navbar-nav > li > a:focus {
-  background-color: transparent;
+  background-color: black;
 }
 
 .custom-navbar .nav li.active > a {
-    background-color: transparent;
+    background-color: black;
     color: #4267b2;
 }
 
 .custom-navbar .navbar-toggle {
     border: none;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .custom-navbar .navbar-toggle {
