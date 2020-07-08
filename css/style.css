@@ -125,7 +125,7 @@ footer {
 }
 
 #contact .btn-danger:hover {
-  background: #222;
+  background: #4267b2;
 }
 
 #intro .btn-default:hover {
@@ -445,7 +445,7 @@ footer {
 }
 
 #register input[type="submit"] {
-  background: #54c8f2;
+  background: #4267b2;
   border-radius: 100px;
   border: none;
   color: #ffffff;
@@ -457,7 +457,7 @@ footer {
 
 #register input[type="submit"]:hover {
   background: #ffffff;
-  color: #222;
+  color: #4267b2;
 }
 
 
