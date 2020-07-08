@@ -240,7 +240,7 @@ footer {
 
 .custom-navbar .navbar-toggle .icon-bar {
     background: #ffffff;
-    border-color: transparent;
+    border-color: #222;
 }
 
 @media(min-width:768px) {
