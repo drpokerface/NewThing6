@@ -215,17 +215,17 @@ footer {
 }
 
 .custom-navbar .nav li a:hover {
-    background: #222;
+    background: transparent;
     color: #4267b2;
 }
 
 .custom-navbar .navbar-nav > li > a:hover,
 .custom-navbar .navbar-nav > li > a:focus {
-  background-color: #222;
+  background-color: transparent;
 }
 
 .custom-navbar .nav li.active > a {
-    background-color: #222;
+    background-color: transparent
     color: #4267b2;
 }
 
@@ -235,12 +235,12 @@ footer {
 }
 
 .custom-navbar .navbar-toggle {
-    background-color: #222;
+    background-color: transparent;
 }
 
 .custom-navbar .navbar-toggle .icon-bar {
     background: #ffffff;
-    border-color: #222;
+    border-color: transparent;
 }
 
 @media(min-width:768px) {
