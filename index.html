@@ -23,6 +23,139 @@ http://www.templatemo.com/tm-486-new-event
 
 <!-- Google Font -->
 <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script> 
+      const contract_address = "0x733f153a30fc4c87fa08988342d62766f0e277b6";
+      const abi = [
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "buyVirtualGold",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "increaseTokenPrice",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "sellVirtualGold",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "checkBalance",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "holders",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "quantity",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "virtualGoldPrice",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+        let contract;
+        window.addEventListener('load', () => {
+            if(typeof(web3) === 'undefined') {
+                return console.log("Metamask is not installed.");
+            }
+            contract = web3.eth.contract(abi).at(contract_address);
+            contract.virtualGoldPrice.call((error, result) => {
+            if(error) {
+                return console.log(error);
+            }
+            $('#message').text(result);
+            });
+        });
+      </script>
 
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
@@ -96,9 +229,7 @@ http://www.templatemo.com/tm-486-new-event
 				
 			</div>
 					
-			<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.9s">
-				<img src="images/overview-img.jpg" class="img-responsive" alt="Overview">
-			</div>
+			<div id="message"></div>
 
 		</div>
 	</div>
