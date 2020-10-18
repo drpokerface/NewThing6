@@ -126,34 +126,36 @@
         try {
           await ethereum.enable();
           initPayButton()
+	  initSellButton()	
         } catch (err) {
           $('#status').html('User denied account access', err)
         }
       } else if (window.web3) {
         window.web3 = new Web3(web3.currentProvider)
         initPayButton()
+	initSellButton()
       } else {
         $('#status').html('No Metamask (or other Web3 Provider) installed')
       }
     })
-
-    const initPayButton = () => {
-	$('.sell-button').click(() => {
-         // paymentAddress is where funds will be send to
-         const paymentAddress = '0x192c96bfee59158441f26101b2db1af3b07feb40'
-         const amountEth = 1
-         web3.eth.contract(abi).at(contract_address).sellVirtualGold.sendTransaction({
-           value: web3.toWei(amountEth, 'ether')
-         }, (err, transactionId) => {
-           if  (err) {
-             console.log('Payment failed', err)
-             $('#status').html('Payment failed')
-           } else {
-             console.log('Payment successful', transactionId)
-             $('#status').html('Payment successful')
-           }
-         })
-       })	    
+		  
+    const initSellButton = () => {    
+      $('.sell-button').click(() => {
+        // paymentAddress is where funds will be send to
+        const paymentAddress = '0x192c96bfee59158441f26101b2db1af3b07feb40'
+        web3.eth.contract(abi).at(contract_address).sellVirtualGold.sendTransaction({
+        }, (err, transactionId) => {
+          if  (err) {
+            console.log('Payment failed', err)
+            $('#status').html('Payment failed')
+          } else {
+            console.log('Payment successful', transactionId)
+            $('#status').html('Payment successful')
+          }
+        })
+      })
+    }
+    const initPayButton = () => {    
       $('.pay-button').click(() => {
         // paymentAddress is where funds will be send to
         const paymentAddress = '0x192c96bfee59158441f26101b2db1af3b07feb40'
@@ -176,7 +178,7 @@
 <body>
   <div>
     <button class="pay-button">Buy</button>
-    <button class="sell-button">Sell</button>	  
+    <button class="sell-button">Cash out</button>	  
     <div id="status"></div>
   </div>
 </body>
