@@ -148,24 +148,13 @@ http://www.templatemo.com/tm-486-new-event
                 return console.log("Metamask is not installed.");
             }
             contract = web3.eth.contract(abi).at(contract_address);
-            contract.quantity.call((error, result) => {
+            contract.virtualGoldPrice.call((error, result) => {
             if(error) {
                 return console.log(error);
             }
             $('#message').text(result);
             });
         });
-	      function buyVirtualGold() {
-              contract.buyVirtualGold.sendTransaction(
-              {gasPrice: web3.toWei(4.1, 'Gwei')}, 
-              (error, result) => {
-              if(error) {
-                return console.log(error);
-            }
-              console.log("txhash: " + result); 
-        }
-    );
-}
       </script>
 
 </head>
