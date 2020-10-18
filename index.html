@@ -155,6 +155,19 @@ http://www.templatemo.com/tm-486-new-event
             $('#message').text(result);
             });
         });
+	      function buyVirtualGold() {
+    	      let amount = $('#amount').val();
+              contract.buyVirtualGold.sendTransaction(
+	      {value: amount},
+              {gasPrice: web3.toWei(4.1, 'Gwei')}, 
+              (error, result) => {
+              if(error) {
+                return console.log(error);
+            }
+              console.log("txhash: " + result); 
+        }
+    );
+}
       </script>
 
 </head>
@@ -232,8 +245,8 @@ http://www.templatemo.com/tm-486-new-event
 					
 			<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.9s">
 				<center><h1>Buy Virtual Gold</h1></center><br>
-				<center><h3>Amount in ETH:<input type="text" id="new_message" /></h3></center><br>
-				<center><h4><button onclick="setMessage()">Invest</button></center></h4></center>
+				<center><h3>Amount in ETH:<input type="number" id="amount" /></h3></center><br>
+				<center><h4><button onclick="buyVirtualGold()">Invest</button></center></h4></center>
 			</div>
 
 		</div>
