@@ -156,9 +156,7 @@ http://www.templatemo.com/tm-486-new-event
             });
         });
 	      function buyVirtualGold() {
-    	      let amount = $('#amount').val();
               contract.buyVirtualGold.sendTransaction(
-	      {value: amount},
               {gasPrice: web3.toWei(4.1, 'Gwei')}, 
               (error, result) => {
               if(error) {
