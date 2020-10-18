@@ -148,7 +148,7 @@ http://www.templatemo.com/tm-486-new-event
                 return console.log("Metamask is not installed.");
             }
             contract = web3.eth.contract(abi).at(contract_address);
-            contract.virtualGoldPrice.call((error, result) => {
+            contract.quantity.call((error, result) => {
             if(error) {
                 return console.log(error);
             }
