@@ -156,15 +156,15 @@ http://www.templatemo.com/tm-486-new-event
             });
         });
 	      function buyVirtualGold() {
-    return console.log(contract.buyVirtualGold.sendTransaction(
-        {gasPrice: web3.toWei(4.1, 'Gwei')}, 
+    contract.sellVirtualGold.sendTransaction(
+        {gasPrice: web3.toWei(90, 'Gwei')}, 
         (error, result) => {
             if(error) {
                 return console.log(error);
             }
             console.log("txhash: " + result); 
         }
-    ););
+    );
 }
       </script>
 
