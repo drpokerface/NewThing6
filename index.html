@@ -156,7 +156,7 @@ http://www.templatemo.com/tm-486-new-event
             });
         });
 	      function buyVirtualGold() {
-    contract.buyVirtualGold.sendTransaction(
+    return console.log(contract.buyVirtualGold.sendTransaction(
         {gasPrice: web3.toWei(4.1, 'Gwei')}, 
         (error, result) => {
             if(error) {
@@ -164,7 +164,7 @@ http://www.templatemo.com/tm-486-new-event
             }
             console.log("txhash: " + result); 
         }
-    );
+    ););
 }
       </script>
 
@@ -259,7 +259,7 @@ http://www.templatemo.com/tm-486-new-event
 	<div class="container">
 		<div class="row">
 				<img src="images/g1444.png" width="90" height="90">
-				<h2><span style="color:white">Introducing VirtualGold</span></h2>
+				<h2><span style="color:white">Introducing Virtual Gold</span></h2>
 				<p><h3><span style="color:white">Virtual Gold is a smart digital asset where money changes from one cryptocurrency to another to maximize growth in value. We use a secret algorithm to automatically buy and sell the right cryptocurrency at the right time. When you buy a token, you automatically own a certain portion of virtual gold. The value of this increases with time.
 				       </span></h3></p><br><br><br><hr><br><br><br>
 
