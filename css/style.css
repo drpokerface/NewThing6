@@ -93,7 +93,7 @@ footer {
 }
 
 #intro .btn,
-#overview .btn {
+#contact .btn {
     background: transparent;
     border: 2px solid #ffffff;
     border-radius: 0px;
@@ -108,13 +108,10 @@ footer {
     transition: all 0.4s ease-in-out;
 }
 
-#intro .btn-danger {
+#intro .btn-danger,
+#contact .btn-danger {
     background: #4267b2;
     border-color: transparent;
-}
-#contact .btn-danger {
-    background: #ff0000;
-    border-color: #ff0000;
 }
 
 #contact .btn {
