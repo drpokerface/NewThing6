@@ -81,7 +81,7 @@ a {
 #detail,
 #speakers, #sponsors,
 footer {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 #overview h3,
