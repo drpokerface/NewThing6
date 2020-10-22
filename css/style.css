@@ -225,7 +225,7 @@ footer {
 }
 
 .custom-navbar .nav li.active > a {
-    background-color: transparent
+    background-color: #101010;
     color: #4267b2;
 }
 
@@ -235,12 +235,12 @@ footer {
 }
 
 .custom-navbar .navbar-toggle {
-    background-color: transparent;
+    background-color: #101010;
 }
 
 .custom-navbar .navbar-toggle .icon-bar {
     background: #ffffff;
-    border-color: transparent;
+    border-color: #101010;
 }
 
 @media(min-width:768px) {
