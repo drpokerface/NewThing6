@@ -146,6 +146,7 @@ http://www.templatemo.com/tm-486-new-event
       if (window.ethereum) {
         window.web3 = new Web3(ethereum);
 	userAccount = ethereum.selectedAddress;
+	$('#account').html(userAccount)  
         try {
           await ethereum.enable();
           initPayButton()
@@ -159,7 +160,7 @@ http://www.templatemo.com/tm-486-new-event
 	initSellButton()
       } else {
         $('#status').html('No Metamask (or other Web3 Provider) installed')
-      }	$('#account').html(userAccount)      
+      }	    
     })
 		  
     const initSellButton = () => {    
