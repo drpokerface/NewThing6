@@ -1,9 +1,6 @@
 /*
-
 New Event
-
 http://www.templatemo.com/tm-486-new-event
-
 */
 
 body {
@@ -95,14 +92,14 @@ footer {
 #intro .btn,
 #contact .btn {
     background: transparent;
-    border: 2px solid #ffffff;
+    border: 2px solid #4267b2;
     border-radius: 0px;
     color: #ffffff;
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 12px;
-    padding: 14px 42px;
-    margin-top: 42px;
+    padding: 10px 42px;
+    margin-top: 20px;
     margin-right: 12px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
@@ -119,8 +116,8 @@ footer {
 }
 
 #intro .btn-danger:hover {
-  background: transparent;
-  border-color: #ffffff;
+  background: #ffffff;
+  border-color: #4267b2;
   color: #ffffff;
 }
 
@@ -131,7 +128,7 @@ footer {
 #intro .btn-default:hover {
     background: #ffffff;
     color: #333333;
-    border-color: transparent;
+    border-color: #4267b2;
 }
 
 .parallax-section {
@@ -198,14 +195,12 @@ footer {
     background-color: #101010;
 }
 /*
-
 .custom-navbar .navbar-brand {
     color: #ffffff;
     font-weight: 600;
     font-size: 3rem;
     line-height: 40px;
 }
-
 .custom-navbar .nav li a {
     color: #ffffff;
     font-size: 30px;
@@ -215,36 +210,29 @@ footer {
     line-height: 1px;
     transition: all 0.4s ease-in-out;
 }
-
 .custom-navbar .nav li a:hover {
     background: transparent;
     color: #4267b2;
 }
-
 .custom-navbar .navbar-nav > li > a:hover,
 .custom-navbar .navbar-nav > li > a:focus {
   background-color: #101010;
 }
-
 .custom-navbar .nav li.active > a {
     background-color: #101010;
     color: #4267b2;
 }
-
 .custom-navbar .navbar-toggle {
     border: none;
     padding-top: 15px;
 }
-
 .custom-navbar .navbar-toggle {
     background-color: #101010;
 }
-
 .custom-navbar .navbar-toggle .icon-bar {
     background: #ffffff;
     border-color: #101010;
 }
-
 @media(min-width:768px) {
     .custom-navbar {
         padding: 0px 0;
@@ -255,10 +243,7 @@ footer {
         background: #101010;
         padding: 0;
     }
-
 }
-
-
 */
 /*---------------------------------------
     Intro section              
@@ -550,8 +535,9 @@ footer {
 /*---------------------------------------
    Sponsors section              
 -----------------------------------------*/
-#sponsors img {
-  margin-top: 18px;
+#sponsors  {
+  /*margin-top: 18px;*/
+  background: #222222;
 }
 
 
@@ -670,7 +656,7 @@ footer {
 }
 
 .social-icon li a:hover {
-    background: #f2545f;
+    background: #4267b2;
     color: #ffffff;
 }
 
@@ -742,4 +728,3 @@ footer {
   }
 
 }
-
