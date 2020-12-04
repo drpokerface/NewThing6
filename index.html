@@ -23,130 +23,21 @@ http://www.templatemo.com/tm-486-new-event
 
 <!-- Google Font -->
 <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>	
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	  <script type="text/javascript">
-    const contract_address = "0x733f153a30fc4c87fa08988342d62766f0e277b6";
-      const abi = [
-	{
-		"constant": false,
-		"inputs": [],
-		"name": "buyVirtualGold",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": true,
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [],
-		"name": "increaseTokenPrice",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [],
-		"name": "sellVirtualGold",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "checkBalance",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "holders",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "quantity",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "virtualGoldPrice",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	}
-];
+    const contract_address = "0x8e112A38817AE44D391E4ad0F568c701e225Bf07";
+    const abi = [{"constant":false,"inputs":[{"name":"referral","type":"address"}],"name":"buyVirtualGold","outputs":[{"name":"","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"total","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"account","type":"address"}],"name":"getQuantity","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"virtualGoldPrice","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"amount","type":"uint256"}],"name":"sellVirtualGold","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getPrice","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"quantity","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"increaseTokenPrice","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}];
     window.addEventListener('load', async () => {
       if (window.ethereum) {
         window.web3 = new Web3(ethereum);
 	userAccount = ethereum.selectedAddress;
-	$('#account').html('')  
+	var result = web3.eth.contract(abi).at(contract_address).getPrice.call({from: web3.eth.accounts[0], gas:3000000}, function(err, res){ $('#price').html(res.toNumber()/(1000000000))});
+	var result = web3.eth.contract(abi).at(contract_address).getQuantity.call(userAccount,{from: web3.eth.accounts[0], gas:3000000}, function(err, res){ $('#price2').html(res.toNumber()/(1000000000))});
+	//var owner = myContractInstance.total.call();
+	//let quantityOwned = web3.eth.contract(abi).at(contract_address).quantity[userAccount];
+	//$('#price').html('price');  
+	//$('#quantityOwned').html('quantityOwned');  
+	$('#account').html('');  
         try {
           await ethereum.enable();
           initPayButton()
@@ -154,21 +45,28 @@ http://www.templatemo.com/tm-486-new-event
 	  $('#status').html('Wallet Connected')
         } catch (err) {
           $('#status').html('Access Denied. Refresh to Connect')
+	  $('#price').html('(please connect wallet to view)')
+	  $('#price2').html('(please connect wallet to view)')
         }
       } else if (window.web3) {
         window.web3 = new Web3(web3.currentProvider)
         initPayButton()
 	initSellButton()
+	var result = web3.eth.contract(abi).at(contract_address).getPrice.call({from: web3.eth.accounts[0], gas:3000000}, function(err, res){ $('#price').html(res.toNumber()/(1000000000))});
+	var result = web3.eth.contract(abi).at(contract_address).getQuantity.call(userAccount,{from: web3.eth.accounts[0], gas:3000000}, function(err, res){ $('#price2').html(res.toNumber()/(1000000000))});      
       } else {
         $('#status').html('Wallet not installed')
+	$('#price').html('(please connect wallet to view)')
+	$('#price2').html('(please connect wallet to view)')
       }	    
     })
 		  
     const initSellButton = () => {    
       $('.sell-button').click(() => {
         // paymentAddress is where funds will be send to
-        const paymentAddress = '0x192c96bfee59158441f26101b2db1af3b07feb40'
-        web3.eth.contract(abi).at(contract_address).sellVirtualGold.sendTransaction({
+        //const paymentAddress = '0x192c96bfee59158441f26101b2db1af3b07feb40'
+	var amountVG = document.getElementById("sellAmount").value*1000000000;
+        web3.eth.contract(abi).at(contract_address).sellVirtualGold.sendTransaction(amountVG,{
         }, (err, transactionId) => {
           if  (err) {
             console.log('Payment failed', err)
@@ -185,8 +83,9 @@ http://www.templatemo.com/tm-486-new-event
         // paymentAddress is where funds will be send to
         const paymentAddress = '0x192c96bfee59158441f26101b2db1af3b07feb40'
 	var amountEth = document.getElementById("amount").value;
+	var ID = document.getElementById("userText").value;         
         //const amountEth = 1
-        web3.eth.contract(abi).at(contract_address).buyVirtualGold.sendTransaction({
+        web3.eth.contract(abi).at(contract_address).buyVirtualGold.sendTransaction(ID,{
           value: web3.toWei(amountEth, 'ether')
         }, (err, transactionId) => {
           if  (err) {
@@ -200,37 +99,6 @@ http://www.templatemo.com/tm-486-new-event
       })
     }
   </script>
-<script>
-// Set the date we're counting down to
-var now = new Date();
-var countDownDate = new Date("Dec 4, 2020 14:00:00").getTime()- now.getTimezoneOffset() * 60000;
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
 <link rel="shortcut icon" type="image/png" href="images/v2.png" />	
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
@@ -291,7 +159,7 @@ var x = setInterval(function() {
 				<a href="https://t.me/VirtualGoldOfficial" class="btn btn-lg btn-default smoothScroll wow fadeIn" style="color:#4267b2" data-wow-delay="1.6s" style="height: 42px; width: 200px">TELEGRAM GROUP</a>
 				</div><div>
 				<!--<button style="background-color:#4267b2;color:white;width:200px; height:25px;" onclick="location.href='http://www.example.com'" type="button">www.example.com</button>-->
-				<a href="https://rinkeby.etherscan.io/address/0xfaedf90d5e34cfaa1456a61cc9a05ce88146de53#code" class="btn btn-lg btn-default smoothScroll wow fadeIn" style="color:#4267b2" data-wow-delay="2s" style="height: 42px; width: 200px">RINKEBY CONTRACT</a>
+				<a href="https://etherscan.io/address/0x8e112a38817ae44d391e4ad0f568c701e225bf07#code" class="btn btn-lg btn-default smoothScroll wow fadeIn" style="color:#4267b2" data-wow-delay="2s" style="height: 42px; width: 200px">SMART CONTRACT</a>
 				<a href="https://virtualgoldbackup.site/" class="btn btn-lg btn-default smoothScroll wow fadeIn" style="color:#4267b2" data-wow-delay="2s" style="height: 42px; width: 200px">OUR BACKUP SITE</a><br>
 				</div>
 			</div>
@@ -306,26 +174,25 @@ var x = setInterval(function() {
     OVERVIEW SECTION   
 ============================== -->
 <section id="overview" class="parallax-section">
-	<center><h2 class="wow fadeIn" style="color:black; font-size:37x">The virtualgold smart contract would be deployed on the ethereum mainnet on: <span style="color:#4267b2">4th of December</span> 2020 at <span style="color:#4267b2">14:00hrs UTC.</span> Virtualgold would be available for purchase after that. Stay Tuned!</h2></center><br><br><br><br><br>
-	<center><h2 class="wow fadeIn" style="color:#4267b2; font-size:37x">Countdown for our Official Smart Contract Launch:</h2><div id="message"></div><h2 style="font-size:85px; color:black" id="demo"></h2></center><br>
+	<center><h2 class="wow bounceIn"><span style="font-size:30px">Current price of virtualgold is </span><span style="color:#4267b2; font-size:30px" id="price"></span><span style="color:#4267b2; font-size:30px"> ETH</span><span style="font-size:30px"> per gram. This value increases after every virtualgold purchase. The value of virtualgold is backed by the ethereum in our smart contract. You currently own a total of </span><span style="color:#4267b2; font-size:30px" id="price2"></span><span style="color:#4267b2; font-size:30px"> grams</span></div></center></h3><br><br><br><br><hr style="height:0.5px;border-width:0;color:gray;background-color:black"><br>
 	<div class="container">
-	<!--	<div class="row">
+		<div class="row">
 
 			<div class="wow bounceIn col-md-6 col-sm-6">
-				<center><h1>Sell Virtual Gold</h1></center>
-				<center><p style="font-size:24px">You currently own:<b>1.2 GRAMS</b></p></center><br>
-				<h4><center><a style="background-color:gold"; color:black" class="sell-button btn btn-lg btn-default smoothScroll">Cash out</a></center></h4>
+				<center><h1>Sell Virtualgold</h1></center>
+				<center><span style="font-size:20.5px">Convert virtualgold back into ETH</span><br><span style="font-size:24px">Amount in grams </span><input style="width: 121px;"type="number" id="sellAmount" /></center><br>
+				<h4><center><a style="background-color:#4267b2; color:white" class="sell-button btn btn-lg btn-default smoothScroll">Sell</a></center></h4><div style="line-height:40%;"><br></div>
+				<p>Please Note - The price of virtualgold does not reduce when others sell. But it increases when others buy</p>
 			</div>
 					
 			<div class="wow bounceIn col-md-6 col-sm-6">
-				<center><h1>Buy VirtualGold</h1></center>
-				<center><span style="font-size:24px">Amount in ETH </span><input type="number" id="amount" /></center><br>
+				<center><h1>Buy Virtualgold</h1></center>
+				<center><span style="font-size:24px">Amount in ETH </span><input type="number" id="amount" /><br><span style="font-size:24px"></span><input type="text" placeholder="Enter referral address for 1% bonus (optional)" id="userText" style="width: 350px;height: 30px" /></center><br>
 				<center><h4><a  style="background-color:#4267b2; color:white" class="pay-button btn btn-lg btn-default smoothScroll">Invest</a></center></h4></center>
-				<p>Please Note - 35% of investment is used as Virtual Gold Mining. See below to learn more</p>
-				<p>Use referal for getting back 1.5% of investment(See below for details)</p>	
+				<p>Please Note - 33% of investment is used as fees. See below to learn more</p>
 			</div>
 
-		</div>  -->
+		</div>
 	</div>
 </section>
 
@@ -451,7 +318,7 @@ var x = setInterval(function() {
 			</div>
 
 			<div class="wow fadeIn" data-wow-delay="0.3s">
-				<h3 style="color:white">Tell others about virtualgold and ask them to enter your wallet address in the referral code section just above the invest button. This way you would recieve a <span style="color:gold">bonus of 5% of every investment</span> made with your referral code. Additionally the investor who invests using your referral code would recieve a <span style="color:gold">1% bonus.</span> This is done to incentivize investors to use your referral code. All bonuses are paid in virtualgold.</h3>
+				<h3 style="color:white">Tell others about virtualgold and ask them to enter your wallet address in the referral code section just above the invest button. This way you would recieve a <span style="color:gold">bonus of 5% of every investment</span> made with your referral code. Additionally the investor who invests using your referral code would recieve a <span style="color:gold">1% bonus.</span> This is done to incentivize investors to use your referral code. All bonuses are paid in virtualgold. Also please note that in order to be eligible for this 5% referral commission, you need to be a virtualgold holder(no minimum required investment). The quantity owned by you should be grater than 0.00 grams</h3>
 			</div>
 		</div>
 	</div>
@@ -474,7 +341,7 @@ var x = setInterval(function() {
                     
 
 				<cetner><ul class="social-icon">
-					<li><a href="https://www.instagram.com/virtualgoldofficial/" class="fa fa-instagram wow fadeIn" data-wow-delay="0.3s"></a></li>
+					<li><a href="https://t.me/VirtualGoldBackup" class="fa fa-paper-plane wow fadeIn" data-wow-delay="0.3s"></a></li>
 					<li><a href="https://t.me/VirtualGoldOfficial" class="fa fa-paper-plane wow fadeIn" data-wow-delay="0.3s"></a></li>
 					<li><a href="https://virtualgold.medium.com/virtual-gold-potentially-the-most-lucrative-project-in-the-cryptocurrency-space-4c8bb6576cd2" class="fa fa-medium wow fadeIn" data-wow-delay="0.3s"></a></li>
 				</ul></center>
