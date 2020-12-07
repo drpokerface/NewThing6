@@ -22,7 +22,7 @@ http://www.templatemo.com/tm-486-new-event
 <link rel="stylesheet" href="css/style.css">
 
 <!-- Google Font -->
-<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>	
+<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	  <script type="text/javascript">
     const contract_address = "0x8e112A38817AE44D391E4ad0F568c701e225Bf07";
@@ -31,8 +31,11 @@ http://www.templatemo.com/tm-486-new-event
       if (window.ethereum) {
         window.web3 = new Web3(ethereum);
 	userAccount = ethereum.selectedAddress;
-	var result = web3.eth.contract(abi).at(contract_address).getPrice.call({from: web3.eth.accounts[0], gas:3000000}, function(err, res){ $('#price').html(res.toNumber()/(1000000000))});
-	var result = web3.eth.contract(abi).at(contract_address).getQuantity.call(userAccount,{from: web3.eth.accounts[0], gas:3000000}, function(err, res){ $('#price2').html(res.toNumber()/(1000000000))});
+	web3.eth.contract(abi).at(contract_address).getPrice.call({from: web3.eth.accounts[0], gas:3000000}, function(err, res){ $('#price').html(res.toNumber()/(1000000000))});
+	web3.eth.contract(abi).at(contract_address).getQuantity.call(userAccount,{from: web3.eth.accounts[0], gas:3000000}, function(err, res2){ $('#price2').html(res2.toNumber()/(1000000000))});
+        web3.eth.contract(abi).at(contract_address).getPrice.call({from: web3.eth.accounts[0], gas:3000000}, function(err1, res1){ web3.eth.contract(abi).at(contract_address).getQuantity.call(userAccount,{from: web3.eth.accounts[0], gas:3000000}, function(err, res2){ $('#price3').html(res1.toNumber()/(1000000000)*res2.toNumber()/(1000000000))});
+});
+
 	//var owner = myContractInstance.total.call();
 	//let quantityOwned = web3.eth.contract(abi).at(contract_address).quantity[userAccount];
 	//$('#price').html('price');  
@@ -103,6 +106,7 @@ http://www.templatemo.com/tm-486-new-event
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
+
 <!-- =========================
      PRE LOADER       
 ============================== -->
@@ -132,7 +136,6 @@ http://www.templatemo.com/tm-486-new-event
 			<ul class="nav navbar-nav navbar-right">
 				<li><p id='account' style="color:white" class="smoothScroll"></p></li>
 			</ul>
-
 		</div> -->
 
 
@@ -174,7 +177,7 @@ http://www.templatemo.com/tm-486-new-event
     OVERVIEW SECTION   
 ============================== -->
 <section id="overview" class="parallax-section">
-	<center><h2 class="wow bounceIn"><span style="font-size:30px">Current price of virtualgold is </span><span style="color:#4267b2; font-size:30px" id="price"></span><span style="color:#4267b2; font-size:30px"> ETH</span><span style="font-size:30px"> per gram. This value increases after every virtualgold purchase. The value of virtualgold is backed by the ethereum in our smart contract. You currently own a total of </span><span style="color:#4267b2; font-size:30px" id="price2"></span><span style="color:#4267b2; font-size:30px"> grams</span></div></center></h3><br><br><br><br><hr style="height:0.5px;border-width:0;color:gray;background-color:black"><br>
+	<center><h2 class="wow bounceIn"><table><tr><td align="right"><span style="color:#4267b2; font-size:30px">You currently own : </span></td><td> <span style="color:black; font-size:30px" id="price2"></span><span style="color:black; font-size:30px"> grams</span></td></tr><tr><td align="right"><span style="font-size:30px">1 gram of virtualgold : </span></td><td> <span style="color:#4267b2; font-size:30px" id="price"></span><span style="color:#4267b2;font-size:30px"> ETH </span></span></td></tr><tr><td align="right"><span style="color:#4267b2; style="font-size:30px">Value of holdings :</span></td><td> <span font-size:30px" id="price3"></span><span style="font-size:30px"> ETH </span></span></td></tr></table><br></div></center></h3><br><br><br><br><hr style="height:0.5px;border-width:0;color:gray;background-color:black"><br>
 	<div class="container">
 		<div class="row">
 
