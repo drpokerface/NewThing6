@@ -43,7 +43,6 @@ function myFunction() {
 <style>
 #more {display: none;}
 </style>
- <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	  <script type="text/javascript">
 		  function selectText(containerid) {
@@ -68,7 +67,7 @@ function myFunction() {
         window.web3 = new Web3(ethereum);
 	userAccount = ethereum.selectedAddress;
 	$('#link').html('https://virtualgold.io/?ref='+userAccount);
-	web3.eth.Contract(abi).at(contract_address).getPrice.call({from: web3.eth.accounts[0], gas:3000000}, function(err, res){ $('#price').html(res.toNumber()/(1000000000)+' ETH')});
+	web3.eth.contract(abi).at(contract_address).getPrice.call({from: web3.eth.accounts[0], gas:3000000}, function(err, res){ $('#price').html(res.toNumber()/(1000000000)+' ETH')});
 	web3.eth.contract(abi).at(contract_address).getQuantity.call(userAccount,{from: web3.eth.accounts[0], gas:3000000}, function(err, res2){$('#price2').html('connect wallet to view')});
         //web3.eth.contract(abi).at(contract_address).getPrice.call({from: web3.eth.accounts[0], gas:3000000}, function(err1, res1){ web3.eth.contract(abi).at(contract_address).getQuantity.call(userAccount,{from: web3.eth.accounts[0], gas:3000000}, function(err, res2){ if(userAccount!=null){ $('#price3').html(res1.toNumber()/(1000000000)*res2.toNumber()/(1000000000)+' ETH')}});
 //});
