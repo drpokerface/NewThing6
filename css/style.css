@@ -2,6 +2,13 @@
 New Event
 http://www.templatemo.com/tm-486-new-event
 */
+
+#apple{
+    background-color:#0E5D7B;
+    margin-top: 0px;
+    background:linear-gradient(white, lightblue);
+}
+
 @media (min-width:629px) {
   #hide {
     display: none;
