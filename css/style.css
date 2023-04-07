@@ -312,7 +312,7 @@ footer {
 }
 */
 /*---------------------------------------
-    Intro section              
+    Intro section     height: 100vh;         
 -----------------------------------------*/
 #intro {
     background: url('../images/img.png') 50% 0 repeat-y fixed;
@@ -328,7 +328,7 @@ footer {
      -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-    height: 100vh;
+    height: 70vh;
     text-align: center;
 	
 color: #222;
