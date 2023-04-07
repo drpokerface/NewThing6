@@ -312,10 +312,11 @@ footer {
 }
 */
 /*---------------------------------------
-    Intro section     height: 100vh;         
+    Intro section     height: 100vh;  
+    background: url('../images/img.png') 50% 0 repeat-y fixed;
 -----------------------------------------*/
 #intro {
-    background: url('../images/img.png') 50% 0 repeat-y fixed;
+    background: url('../images/venue-bg.jpg') 50% 0 repeat-y fixed;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
